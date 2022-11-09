@@ -48,7 +48,7 @@ function PageName() {
         <>
             <h2>带着 参数跳转 到 左侧菜单上 不存在的 详情页</h2>
             <h3>参数: id: 001, name: 关羽</h3>
-            <Space>
+            <Space wrap>
                 <Button onClick={searchRouting}>search 方式(? 拼接)</Button>
                 <Button onClick={stateRouting}>state 方式(隐藏参数)</Button>
                 <Button onClick={paramsRouting}>params 方式(/ 拼接) 跳转到空白页</Button>

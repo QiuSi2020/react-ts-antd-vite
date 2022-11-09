@@ -57,7 +57,7 @@ function PageTwo() {
     return (
         <>
             <h1>页面二</h1>
-            <Space>
+            <Space wrap>
                 <Button onClick={() => goPageOne()}>到页面一</Button>
                 <Button onClick={() => toPageFour()}>到页面四</Button>
                 <Button onClick={() => removeCurrentTab()}>传入当前pathname,移除对应Tab</Button>

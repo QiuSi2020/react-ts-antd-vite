@@ -90,7 +90,6 @@ function Login(props: MyProps) {
             }
         }
 
-        message.success('登录成功')
         setCookie('token', token)// 存储 token
         userInfoSave(user)// 保存用户信息
         loginOrexit(true)// 标记登录状态为 true

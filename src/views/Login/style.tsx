@@ -41,8 +41,8 @@ export const LoginDiv = styled.div.attrs({className: 'LoginDiv'})`
         border-radius: 10px;
         background-color: #e2e2e2;
         background-repeat: no-repeat;
-        /* background-image: linear-gradient(224deg, #D9AFD9 0%, #97D9E1 100%); */
-        background-image: 
+        background-image: linear-gradient(224deg, #D9AFD9 0%, #97D9E1 100%);
+        /* background-image: 
             radial-gradient(closest-side, rgba(217, 175, 217, 1), rgba(151, 217, 225, 1)),
             radial-gradient(closest-side, rgba(0, 147, 233, 1), rgba(128, 208, 199, 1)),
             radial-gradient(closest-side, rgba(133, 255, 189, 1), rgba(255, 251, 125, 1));
@@ -54,7 +54,7 @@ export const LoginDiv = styled.div.attrs({className: 'LoginDiv'})`
             -50vmax -50vmax,
             0vmax 0vmax,
             50vmax 50vmax;
-        animation: 4s movement linear infinite;
+        animation: 4s movement linear infinite; */
 
         .login_title{
             font-family: PingFangSC-Medium;

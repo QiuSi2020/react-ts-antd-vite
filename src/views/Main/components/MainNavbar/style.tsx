@@ -13,10 +13,6 @@ export const Navbar = styled.div.attrs({className: 'NavbarCss'})`
         margin: 0;
         padding: ${unitPx};
 
-        /* 让 额外操作 贴底 */
-        display: flex;
-        align-items: end;
-
         &>.ant-tabs-nav-wrap>.ant-tabs-nav-list {
             div {
                 margin-right: 0 !important;

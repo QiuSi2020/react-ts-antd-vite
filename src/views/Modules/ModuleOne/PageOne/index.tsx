@@ -58,11 +58,11 @@ function PageOne() {
             <h1>页面一</h1>
             {hoverContent}
             <Space size='middle' direction='vertical'>
-                <Space size='middle'>
+                <Space size='middle' wrap>
                     <Button onClick={() => goPageTwo()}>到页面二</Button>
                     <Button onClick={() => toPageFour()}>到菜单项不存在的页面四</Button>
                 </Space>
-                <Space size='middle'>
+                <Space size='middle' wrap>
                     <Button onClick={() => numAdd()}>+1</Button>
                     <span>异步更新的值: {num}</span>
                     <span>同步更新的值: {titleOne.current}</span>

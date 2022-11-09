@@ -19,9 +19,6 @@ export const centerBox = `
 
 // 自定义滚动条
 export const custom_scrollbar = `
-    overflow-x: hidden;
-    overflow-y: auto;
-
     // 滚动条 样式(谷歌)
     ::-webkit-scrollbar {
         // 滚动条整体样式
@@ -44,11 +41,8 @@ export const custom_scrollbar = `
     scrollbar-color:#afafaf transparent;
 `
 
+// 隐藏滚动条
 export const hidden_scrollbar = `
-    overflow-x: hidden;
-    overflow-y: auto;
-
-    // 隐藏 滚动条
     ::-webkit-scrollbar { display: none; }// 谷歌浏览器
     scrollbar-width: none;// 火狐浏览器
 `

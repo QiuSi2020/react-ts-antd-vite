@@ -3,7 +3,7 @@ import {useRoutes, useNavigate, useLocation} from 'react-router-dom'
 
 import {connect} from 'react-redux'
 
-import {routes} from './index'
+import {routes, firstPath} from './index'
 
 import {getCookie} from '@/utils/cookie'
 
@@ -21,6 +21,8 @@ function FrontendAuth(prosp: MyObject) {
 
     const {pathname} = useLocation()
 
+    const navigate = useNavigate()
+
     // const flag: React.MutableRefObject<null | true> = useRef(null)
     // useEffect(() => {
     //     if(!flag.current){
@@ -36,6 +38,9 @@ function FrontendAuth(prosp: MyObject) {
             bus.emit("clearLoginInfo")
             message.info('请登录')
         }
+        // if (window.location.pathname == '/login' && getCookie('token')) {
+        //     navigate(firstPath)
+        // }
     }, [pathname])
 
     // useEffect(() => {

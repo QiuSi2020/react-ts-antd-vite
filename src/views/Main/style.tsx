@@ -66,6 +66,8 @@ export const MenuBox = styled.div`
     height: calc(100vh - var(--height) - 48px);
     
     // 隐藏 滚动条
+    overflow-x: hidden;
+    overflow-y: auto;
     ${hidden_scrollbar}
 
     /* overflow-x: hidden;

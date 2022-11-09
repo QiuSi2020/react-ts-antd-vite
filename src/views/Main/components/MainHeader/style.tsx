@@ -19,5 +19,7 @@ export const CardBox = styled.div`
 
     max-height: 80vh;// 最大高度
     
+    overflow-x: hidden;
+    overflow-y: auto;
     ${custom_scrollbar}
 `

@@ -8,8 +8,10 @@ export const Div = styled.div.attrs({className: 'MainContentCss'})`
 
     .content_ {
 
-        /* 此内的div最大宽度一般为： */
-        /* div {width: calc(100%);} */
+        // 超出出现自定义滚动条(横向)
+        overflow-x: auto;
+        overflow-y: hidden;
+        ${custom_scrollbar}
 
         // 100vh - 顶部栏高度 - navbar高度 - 父元素的 padding-bottom
         min-height: calc(100vh - 64px - calc(40px + 2*${unitPx}) - ${unitPx});
@@ -32,7 +34,9 @@ export const Div = styled.div.attrs({className: 'MainContentCss'})`
     padding: ${unitPx};
     padding-top: 0;
 
-    // 自定义滚动条
+    // 超出出现自定义滚动条(竖向)
+    overflow-x: hidden;
+    overflow-y: auto;
     ${custom_scrollbar}
 
 `

@@ -21,8 +21,6 @@ export const centerBox = `
 export const custom_scrollbar = `
     overflow-x: hidden;
     overflow-y: auto;
-    
-    // overflow: auto;// 横向滚动条也出现
 
     // 滚动条 样式(谷歌)
     ::-webkit-scrollbar {

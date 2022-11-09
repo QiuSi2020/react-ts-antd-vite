@@ -14,7 +14,9 @@ export default function MainContent() {
                         <Spin size="large" />
                     </div>
                 }>
-                    <Outlet />
+                    <div className="content_plus">
+                        <Outlet />
+                    </div>
                 </Suspense>
             </div>
         </Div>

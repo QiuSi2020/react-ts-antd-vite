@@ -7,12 +7,6 @@ const padding_ = '10px'// 内容框内边距
 export const Div = styled.div.attrs({className: 'MainContentCss'})`
 
     .content_ {
-
-        // 超出出现自定义滚动条(横向)
-        /* overflow-x: auto;
-        overflow-y: hidden;
-        ${custom_scrollbar} */
-
         // 100vh - 顶部栏高度 - navbar高度 - 父元素的 padding-bottom
         min-height: calc(100vh - 64px - calc(40px + 2*${unitPx}) - ${unitPx});
         padding: ${padding_};
@@ -24,6 +18,14 @@ export const Div = styled.div.attrs({className: 'MainContentCss'})`
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+
+        .content_plus {
+            overflow: hidden;
+            // 超出出现自定义滚动条(横向)
+            /* overflow-x: auto;
+            overflow-y: hidden;
+            ${custom_scrollbar} */
         }
     }
 

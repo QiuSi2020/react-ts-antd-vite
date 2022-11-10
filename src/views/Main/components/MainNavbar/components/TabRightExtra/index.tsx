@@ -88,14 +88,14 @@ export default function TabRightExtra(props: TabRightExtraProps) {
                             size={buttonSize}
                             onClick={() => closeLeftTab()}
                             // disabled={LeftTabFlag}
-                            disabled={(!LeftTabFlag && RightTabFlag) || (!RightTabFlag && LeftTabFlag)}
+                            disabled={panes.length == 1 || (!LeftTabFlag && RightTabFlag) || (!RightTabFlag && LeftTabFlag)}
                         >关闭左侧标签页</Button>
                         <Button 
                             ghost 
                             size={buttonSize}
                             onClick={() => closeRightTab()}
                             // disabled={RightTabFlag}
-                            disabled={(!LeftTabFlag && RightTabFlag) || (!RightTabFlag && LeftTabFlag)}
+                            disabled={panes.length == 1 || (!LeftTabFlag && RightTabFlag) || (!RightTabFlag && LeftTabFlag)}
                         >关闭右侧标签页</Button>
                         <Button 
                             ghost 

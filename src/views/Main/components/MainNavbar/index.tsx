@@ -140,30 +140,32 @@ const App: React.FC<PropsObj> = ({current}) => {// current：由另一个页面�
 
         const panesIndex = panes.findIndex(f => f.key == CurrentTab.id)// 当前Tab在panes中的下标
         
-        var newPanes_: PanesProps[] = []
+        var deletePanes: PanesProps[] = []
 
         switch (flagName) {
             case 'left':
-                newPanes_ = panes.filter((v, index) => index < panesIndex)
+                deletePanes = panes.filter((v, index) => index < panesIndex)
                 break;
                 
             case 'right':
-                newPanes_ = panes.filter((v, index) => index > panesIndex)
+                deletePanes = panes.filter((v, index) => index > panesIndex)
                 break;
 
             case 'other':
-                newPanes_ = panes.filter((v, index) => index != panesIndex)
+                deletePanes = panes.filter((v, index) => index != panesIndex)
                 break;
                 
             default:
                 break;
         }
         
-        if (newPanes_ && newPanes_.length > 0) {
-            for(let i=0; i<newPanes_.length; i++) {
-                removeKeepAlive(newPanes_[i].key)
+        if (deletePanes && deletePanes.length > 0) {
+            let deletePanesKey: string[] = []
+            for(let i=0; i<deletePanes.length; i++) {
+                removeKeepAlive(deletePanes[i].key)
+                deletePanesKey.push(deletePanes[i].key)
             }
-            setPanes(panes.filter(v => v.key == CurrentTab.id))
+            setPanes(panes.filter(v => !deletePanesKey.includes(v.key)))
         }
     }
     
